@@ -1,0 +1,98 @@
+.btn-action{
+    padding:11px 45px;
+    border: 2px solid #fd562a;
+    border-radius: 27px;
+    transition: color 0.4s linear;
+    position:relative;
+    overflow: hidden;
+    display: inline-block;
+    font-family: "Gilroy-Bold";
+}
+
+.btn-action:hover{
+    color: #fff;
+}
+
+.btn-action:hover::before{
+    -webkit-animation: criss-cross-left 0.8s both;
+    animation: criss-cross-left 0.8s both;
+    animation-duration: alternate;
+    -webkit-animation-duration: alternate;
+}
+
+.btn-action:hover::after{
+    -webkit-animation: criss-cross-right 0.8s both;
+    animation: criss-cross-right 0.8s both;
+    animation-duration: alternate;
+    -webkit-animation-duration: alternate;
+}
+
+.btn-action::before,
+.btn-action::after{
+    position: absolute;
+    z-index: -1;
+    top:50%;
+    content:'';
+    width: 20px;
+    height: 20px;
+    background-color: #fd562a;
+    border-radius: 50%;
+}
+
+.btn-action::before{
+    left:-20px;
+    transform:translate(-50%,-50%)
+}
+.btn-action::after{
+    right:-20px;
+    transform:translate(50%,-50%)
+}
+
+@keyframes criss-cross-left {
+    0%{
+        left:-20px
+    }
+    50%{
+        left:50%;
+        width: 20px;
+        height: 20px;
+    }
+    100%{
+        left:50%;
+        width: 375px;
+        height: 375px;
+    }
+}
+@keyframes criss-cross-right {
+    0%{
+        right:-20px
+    }
+    50%{
+        right: 50%;
+        width: 20px;
+        height: 20px;
+    }
+    100%{
+        right:50%;
+        width: 375px;
+        height: 375px;
+    }
+}
+
+.btn-action.style-2{
+    background-color: #fd562a;
+    padding: 20px 48px;
+    border-radius: 33px;
+    z-index: 1;
+    border: none;
+}
+
+.btn-action.style-2:hover {
+    color:#fd562a;
+    transition-delay: 0.5s;
+}
+
+.btn-action.style-2::before,
+.btn-action.style-2::after{
+    background-color: #fff;
+}

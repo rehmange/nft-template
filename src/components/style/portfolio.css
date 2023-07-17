@@ -1,0 +1,45 @@
+.icon-box {
+    border-radius: 20px;
+    padding:60px 60px 39px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+@media only screen and (max-width: 1024px){
+    .icon-box{
+        flex-wrap: wrap;
+    }
+    .icon-box .icon {
+        margin-bottom: 20px;
+    }
+}
+
+.icon-box .icon{
+    min-width:90px;
+    width:90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    transition:all 1s ease-in-out;
+}
+
+
+.icon-box .content {
+    padding-top: 7px;
+}
+
+.icon-box .content p.fs-16 {
+    margin-bottom: 0;
+}
+
+.icon-box .content a.h5{
+    margin-bottom: 20px;
+}
+
+.icon-box:hover .icon {
+    transform:rotateY(360deg);
+}
